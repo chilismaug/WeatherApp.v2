@@ -45,6 +45,9 @@
     "name": "Joshua Tree"
   },
   {
+    "name": "Karachivka"
+  },
+  {
     "name": "Kathmandu"
   },
   {
@@ -62,6 +65,9 @@
   {
     "name": "Manilla"
   },
+  {
+    "name": "Maungaturoto"
+  },	
   {
     "name": "Maysville"
   },
@@ -105,8 +111,14 @@
     "name": "San Diego"
   },
   {
-	"name": "Seagoville"
+    "name": "Seagoville"
   },
+  {
+    "name": "Tanganyika"
+   },
+  {
+    "name": "Tbilisi"
+   },
   {
     "name": "Tijuana"
   },
@@ -115,6 +127,9 @@
   },
   {
     "name": "Tehachapi"
+  },
+  {
+    "name": "Tierra del Fuego"
   },
   {
     "name": "Tupelo"
@@ -138,6 +153,9 @@
     "name": "Wanaque"
   },
   {
+    "name": "Whakapirau"
+  },
+ {
     "name": "Whippany"
   },
   {
