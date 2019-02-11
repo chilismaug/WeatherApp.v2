@@ -1,5 +1,6 @@
 [
-  {
+
+   {
     "name": "Aden"
   },
   {
@@ -21,7 +22,10 @@
     "name": "Buenos Aires"
   },
   {
-    "name": "Cape Town"
+    "name": "Cabo de Hornos"
+  },
+  {
+    "name": "Cape Horn"
   },
   {
     "name": "Canberra"
@@ -42,16 +46,22 @@
     "name": "Edmonton"
   },
   {
+    "name": "Elbrus"
+  },
+  {
     "name": "Half Moon Bay"
+  },
+  {
+    "name": "Johannesburg"
   },
   {
     "name": "Joshua Tree"
   },
   {
-    "name": "Komarivka"
+    "name": "Kathmandu"
   },
   {
-    "name": "Kathmandu"
+    "name": "Komarivka"
   },
   {
     "name": "Kyoto"
@@ -88,6 +98,12 @@
   },
   {
     "name": "Montreal"
+  },
+  {
+    "name": "Mont Blanc"
+  },
+  {
+    "name": "Mount Washington"
   },
   {
     "name": "Nice"
@@ -152,9 +168,6 @@
   },
   {
     "name": "Vancouver"
-  },
-  {
-    "name": "Villa Tehuelche"
   },
   {
     "name": "Wanaque"
