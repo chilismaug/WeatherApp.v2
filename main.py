@@ -15,22 +15,15 @@ def index():
 #    jsonFile = os.path.join( "static", "data", filename)
     jsonFile = os.path.join(os.path.split(__file__)[0], 'data/cities.json')
 
-    here_data = [{'name':'Toronto'},
-               {'name':'Montreal'},
-               {'name':'Kyoto'},
-               {'name':'Canberra'},
-               {'name':'Reykjavik'},
-               {'name':'Calgary'},
-               {'name':'Ottawa'},
-               {'name':'Edmonton'},
-               {'name':'Mississauga'},
-               {'name':'Winnipeg'},
-               {'name':'Vancouver'},
-               {'name':'Brampton'},
-               {'name':'Timbuktu'},
+    here_data = [{'name':'Canberra'},
                {'name':'Kathmandu'},
-               {'name':'Quebec'}
-               ]
+               {'name':'Kyoto'},
+               {'name':'Montreal'},
+               {'name':'Quebec'},
+               {'name':'Reykjavik'},
+               {'name':'Timbuktu'},
+               {'name':'Toronto'},
+               {'name':'Vancouver'}]
 
     try:
         with open(jsonFile) as f:
