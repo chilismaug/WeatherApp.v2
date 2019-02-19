@@ -11,3 +11,7 @@ handlers:
 libraries:
   - name: ssl
     version: latest
+
+
+env_variables:
+  CLOUD_STORAGE_BUCKET: "https://console.cloud.google.com/storage/browser/weatherapiflask.appspot.com"

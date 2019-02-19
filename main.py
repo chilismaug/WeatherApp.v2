@@ -1,12 +1,16 @@
 #!/usr/bin/env python
-from pprint import pprint as pp
-from flask import Flask, flash, redirect, render_template, request, url_for
-from weather import query_api
 import json
 import os
 import logging
+from pprint import pprint as pp
+from flask import Flask, flash, redirect, render_template, request, url_for
+from weather import query_api
+from google.cloud import storage
 
 app = Flask(__name__)
+
+# Configure this environment variable via app.yaml
+CLOUD_STORAGE_BUCKET = os.environ['CLOUD_STORAGE_BUCKET']
 
 @app.route('/')
 def index():
