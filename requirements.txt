@@ -7,4 +7,5 @@ Jinja2==2.9.6
 MarkupSafe==1.0
 pytz==2017.2
 requests >= 2.18.0
+requests_toolbelt >= 0.8
 Werkzeug==0.12.1

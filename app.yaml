@@ -14,4 +14,4 @@ libraries:
 
 
 env_variables:
-  CLOUD_STORAGE_BUCKET: "https://console.cloud.google.com/storage/browser/weatherapiflask.appspot.com"
+  CLOUD_STORAGE_BUCKET: "weatherapiflask.appspot.com"
