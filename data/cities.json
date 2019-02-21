@@ -55,6 +55,9 @@
     "name": "Half Moon Bay"
   },
   {
+    "name": "Ilulissat"
+  },
+  {
     "name": "Johannesburg"
   },
   {
@@ -78,6 +81,12 @@
     {
     "name": "Las Cuevas"
   }, 
+  {
+    "name": "Leipsig"
+  },
+  {
+    "name": "Longyearbyen"
+  },
   {
     "name": "Lusaka"
   },
@@ -122,6 +131,9 @@
   },
   {
     "name": "Odessa"
+  },
+  {
+    "name": "Oslo"
   },
   {
     "name": "Ottawa"
@@ -189,6 +201,9 @@
   },
   {
     "name": "Vancouver"
+  },
+  {
+    "name": "Vyborg"
   },
   {
     "name": "Wanaque"
