@@ -30,14 +30,19 @@ def index():
     # the data file will be known as a blob to us henceforth
     myblob = bucket.get_blob(CLOUD_STORAGE_FOLDER + "/"+ file_name)
 
+
     print("we have blob!")
     print(myblob.name)
+    b = myblob.download_as_string()
+    print("what's in b, a blob?")
+    print(b)
 
     #    goo_cloud_dta_url = 'https://00e9e64bacfaa9cc0617d1a99652a0c37ad7874916782379f3-apidata.googleusercontent.com/download/storage/v1/b/weatherapiflask.appspot.com/o/jsondata%2Fdata%2Fcities.json?qk=AD5uMEvaEIv5MYeC8_uqRLsL9fcjsDsKxIWd_4wkv60NOa1m76ZfK7j3d-h48iUdt7KqSmoMs7pHLwdW0D1_ot60se5bXHssZV44pNlblbXcII6zhapVCN0FEOoMtWhNS97SjmdklBya7DSEToHyL0yiJDjVM7k_q3tdMKjVwZStCLYYhRyxDKMKXu8ovykN6R5iwrtU4h3RcSjrGUThMh0DRkl13fxjDcz4PnTaGXpsJGdIpFDkscAC2icAoowy41abXeAOlwBojjOhYasR2hm7Lun8Ih0v5beo5USJdoxL3Hrpo45al8AOfZVbHjO1s5kiLJftqCLeU8iqerZu9nzj5P0BQs5ZjklXSB83z_5RD7va3btw8kOns3TMGdrsSvKFAsNlMSSg921jTNUlgCtA4o46hK1J9YCOxH0eO9-3uIDTq-ROxB9ySHOS1-tsE86iG2kzeAecaPJrtxumlU21c_B7SVfwFsbI2UaF227sz-Qyj7_QSthHMHDRkwx4l_E5lFFwR7IKlgfiUnm7A5KSpdVzsgLovYnBhCP4Yl1nzVIvzGgrzK3CNLCq-2r4oOIYzKwfCJR9SC8b9oKEthOUNd1ilIHc_fPRzSnVbiWItyiATXZTH8xjhrX776s44BUgE59YoucJdnS8CUlGb_zlAOBf7_LV2QWDAzfaZpqM77gBHw3DDtmm8-8OoawabhyeuVDNKxkGNmW_h_AS9gOmSCphOwaXOCsSdiTJYMMVhHov0dr8vLHtZ0iYxdEaL5GiUDGEJ-jl5UFJjAIETQR3z9cx52ToKArWE0iIA1j1kVq0X_c4PGs'
 
-    jsonFile =   myblob.download_as_string().decode()
+
 
     # blob.download_as_string  # feb 19, 2019 : amazed if this works, just sayin'
+    # well it didn't
 
 
     here_data = [{'name':'Canberra'},
@@ -51,10 +56,13 @@ def index():
                {'name':'Vancouver'}]
 
     try:
-        with open(jsonFile) as f:
-          file_data = json.load(f)
+    #    with open(jsonFile) as f:
+        print("gonna try to download blob into b, load as json...")
+        file_data = json.loads(b)
     except:
         file_data = [{"name":"json file read failed"}]
+
+    print(file_data)
 
     if len(file_data) > 1:
         data = file_data
@@ -65,7 +73,7 @@ def index():
         'weather.html',
         data=data,
         phase='ask',
-        jsinfo=jsonFile)
+        jsinfo=file_data)
 
 
 @app.route("/result", methods=["GET", "POST"])
