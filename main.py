@@ -17,26 +17,7 @@ CLOUD_STORAGE_FOLDER = "data"
 def index():
     file_name = "cities.json"
 
-#    jsonFile = os.path.join( "static", "data", filename)
-#    jsonFile = os.path.join(os.path.split(__file__)[0], 'data/cities.json')
-
-    # create Goo Cloud Storage client to get that json from
-    gcs = storage.Client()
-    # Get the bucket that the file will be uploaded to.
-    bucket = gcs.get_bucket(CLOUD_STORAGE_BUCKET)
-
-    list_blobs(CLOUD_STORAGE_BUCKET)
-
-    # the data file will be known as a blob to us henceforth
-    myblob = bucket.get_blob(CLOUD_STORAGE_FOLDER + "/"+ file_name)
-
-    print("we have blob!")
-    print(myblob.name)
-    b = myblob.download_as_string()
-    print("what's in b, a blob?")
-    print(b)
-
-
+    # fallback data in case can't get cloud json
     here_data = [{'name':'Canberra'},
                {'name':'Kathmandu'},
                {'name':'Kyoto'},
@@ -47,8 +28,32 @@ def index():
                {'name':'Toronto'},
                {'name':'Vancouver'}]
 
+#    jsonFile = os.path.join( "static", "data", filename)
+#    jsonFile = os.path.join(os.path.split(__file__)[0], 'data/cities.json')
+
+    # create Goo Cloud Storage client to get that json from
+    gcs = storage.Client()
+    # Get the bucket that the file will be uploaded to.
+    bucket = gcs.get_bucket(CLOUD_STORAGE_BUCKET)
+
+    # the data file will be known as a blob to us henceforth
+    myblob = bucket.get_blob(CLOUD_STORAGE_FOLDER + "/"+ file_name)
+
+    print("we have blob!")
+    print(myblob.name)
+    b = myblob.download_as_string()
+
+    print("what's in b, a blob?")
+    print(b)
+
+"""
+# this way is called using a "context manager"
+# replace the try block with this
+with myblob.download_as_string() as b
+    file_data = json.loads(b)
+"""
+
     try:
-        print("gonna try to download blob into b, load as json...")
         file_data = json.loads(b)
     except:
         file_data = [{"name":"json file read failed"}]
@@ -93,42 +98,6 @@ def server_error(e):
     See logs for full stacktrace.
     """.format(e), 500
 
-
-def list_blobs(bucket_name):
-    """Lists all the blobs in the bucket."""
-    print("listing bucket blobs")
-    gcs = storage.Client()
-    bucket = gcs.get_bucket(bucket_name)
-
-    blobs = bucket.list_blobs()
-
-    for blob in blobs:
-        print(blob.name)
-
-def _read_file(blob, format):
-        """Reads a non-notebook file.
-
-        blob: instance of :class:`google.cloud.storage.Blob`.
-        format:
-          If "text", the contents will be decoded as UTF-8.
-          If "base64", the raw bytes contents will be encoded as base64.
-          If not specified, try to decode as UTF-8, and fall back to base64
-        """
-        bcontent = blob.download_as_string()
-
-        if format is None or format == "text":
-            # Try to interpret as unicode if format is unknown or if unicode
-            # was explicitly requested.
-            try:
-                return bcontent.decode("utf8"), "text"
-            except UnicodeError:
-                if format == "text":
-                    raise web.HTTPError(
-                        400, "%s is not UTF-8 encoded" %
-                             blob.file_name,
-                        reason="bad format",
-                    )
-        return base64.encodebytes(bcontent).decode("ascii"), "base64"
 
 
 if __name__=='__main__':
