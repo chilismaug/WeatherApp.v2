@@ -41,23 +41,17 @@ def index():
 
     print("we have blob!")
     print(myblob.name)
+
     b = myblob.download_as_string()
-
-    print("what's in b, a blob?")
+    print("what's in b?")
     print(b)
-
-"""
-# this way is called using a "context manager"
-# replace the try block with this
-with myblob.download_as_string() as b
-    file_data = json.loads(b)
-"""
 
     try:
         file_data = json.loads(b)
     except:
         file_data = [{"name":"json file read failed"}]
 
+    print("what's in file_data?")
     print(file_data)
 
     if len(file_data) > 1:
@@ -97,8 +91,6 @@ def server_error(e):
     An internal error occurred: <pre>{}</pre>
     See logs for full stacktrace.
     """.format(e), 500
-
-
 
 if __name__=='__main__':
     app.run(debug=True)
