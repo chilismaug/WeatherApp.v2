@@ -1,7 +1,9 @@
 [
-
-   {
+  {
     "name": "Aden"
+  },
+  {
+    "name": "Amalfi"
   },
   {
     "name": "Antwerp"
@@ -34,6 +36,12 @@
     "name": "Calgary"
   },
   {
+    "name": "Chefchaouen"
+  },
+  {
+    "name": "Chennai"
+  },
+  {
     "name": "Cheviot"
   },
   {
@@ -56,6 +64,9 @@
   },
   {
     "name": "Ilulissat"
+  },
+  {
+    "name": "Isfahan"
   },
   {
     "name": "Johannesburg"
@@ -83,6 +94,9 @@
   }, 
   {
     "name": "Leipsig"
+  },  
+  {
+    "name": "Lhasa"
   },
   {
     "name": "Longyearbyen"
@@ -101,6 +115,9 @@
   },
  {
     "name": "McMurdo Station"
+  },
+ {
+    "name": "Metuchen"
   },
   {
     "name": "Miami"
@@ -154,6 +171,12 @@
     "name": "Quintana Roo"
   },
   {
+    "name": "Riga"
+  },
+  {
+    "name": "Rio de Janeiro"
+  },
+  {
     "name": "Reykjavik"
   },
   {
@@ -163,7 +186,16 @@
     "name": "Seagoville"
   },
   {
+    "name": "Split"
+  },
+  {
     "name": "Tanganyika"
+   },
+   {
+    "name": "Tehachapi"
+	},
+   {
+    "name": "Tenafly"
    },
    {
     "name": "Tenerife"
@@ -176,9 +208,6 @@
   },
   {
     "name": "Timbuktu"
-  },
-  {
-    "name": "Tehachapi"
   },
 
   {
@@ -194,10 +223,10 @@
     "name": "Ushuaia"
   },
   {
-    "name": "Uzbekistan"
+    "name": "Utrecht"
   },
   {
-    "name": "Utrecht"
+    "name": "Valparaíso"
   },
   {
     "name": "Vancouver"
@@ -216,6 +245,9 @@
   },
   {
     "name": "Winnipeg"
+  },
+  {
+    "name": "Zagreb"
   },
   {
     "name": "Zanesville"

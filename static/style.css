@@ -1,26 +1,53 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-body,a {
+.center-on-page-top {
+  grid-column: span 1;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+.center-on-page-mid {
+  grid-column: span 1;
+  position: absolute;
+  top: -30%;
+  left: 140%;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .center-on-page-top,
+  .center-on-page-mid,
+  .form-inline {
+    position: relative;
+    top: 30%;
+    left: 20%;
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+// Full height!
+body {
+  min-height: 100vh;
+}
+body,
+a {
   color: #161616;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   background-color: currentColor;
 }
-.center-on-page-top {
-  position: absolute;
-  top:30%;
-  left:20%;
-}
-.center-on-page-mid {
-  position: absolute;
-  top:-65%;
-  left:140%;
+h1 {
+  font-size: calc(1em + 3vw);
 }
 h1 {
   text-align: center;
-  color:#FFFFFF;
+  color: #ffffff;
 }
 h3 {
-  color:#BBBBCC;
+  color: #bbbbcc;
 }
 img {
   vertical-align: middle;
@@ -46,13 +73,13 @@ select {
   line-height: 3;
   background: #2c3e50;
   overflow: hidden;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 select {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0 0 0 .5em;
+  padding: 0 0 0 0.5em;
   color: #fff;
   cursor: pointer;
 }
@@ -61,7 +88,7 @@ select::-ms-expand {
 }
 /* Arrow */
 .select::after {
-  content: '\25BC';
+  content: "\25BC";
   position: absolute;
   top: 0;
   right: 0;
@@ -75,12 +102,12 @@ select::-ms-expand {
   color: #f39c12;
 }
 .select::after {
-  -webkit-transition: .25s all ease;
-  -o-transition: .25s all ease;
-  transition: .25s all ease;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
 /* Ye Olde Backe Linke */
-.fauxbtn{
+.fauxbtn {
   -webkit-appearance: button;
   -moz-appearance: button;
   -ms-appearance: button;
@@ -90,14 +117,14 @@ select::-ms-expand {
   line-height: 16px;
   background: #2c3e50;
   padding: 15px;
+  text-decoration: none;
+  font-size: 12px;
   margin-top: 20px;
   color: #fff;
-  text-decoration : none;
-  font-size: 12px;
   cursor: pointer;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
-.btn{
+.btn {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -107,14 +134,15 @@ select::-ms-expand {
   border: 0 !important;
   background: #2c3e50;
   background-image: none;
-  width: 100%;
+  width: 250px;
   height: 40px;
   margin: 0;
   margin-top: 20px;
   color: #fff;
   cursor: pointer;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
-.btn,.fauxbtn:hover{
+.btn,
+.fauxbtn:hover {
   color: #f39c12;
 }
