@@ -9,28 +9,25 @@
 	<div class="center-on-page-top">
 	  <ul>
 		<li>
-				<h1>Weather in a City </h1>
-		  <br>
-					{% if phase == 'answer' %}
-						<a href="/" class="fauxbtn">Reload City List</a>
-					{% else %}
-						<form class="form-inline" method="POST" action="{{ url_for('result') }}">
-							<div class="select">
-							<select name="comp_select" class="selectpicker form-control">
-							{% for o in data %}
-								<option value="{{ o.name }}">{{ o.name }}</option>
-							{% endfor %}
-							</select>	
-							</div>						
-							<button type="submit" class="btn">Go</button>
-						</form>					
-					{% endif %}
-				
+			<h1>Weather in a City </h1>
+			{% if phase == 'answer' %}
+				<a href="/" class="fauxbtn">Reload City List</a>
+			{% else %}
+				<form class="form-inline" method="POST" action="{{ url_for('result') }}">
+					<div class="select">
+						<select name="comp_select" class="selectpicker form-control">
+						{% for o in data %}
+							<option value="{{ o.name }}">{{ o.name }}</option>
+						{% endfor %}
+						</select>	
+					</div>						
+					<button type="submit" class="btn">Go</button>
+				</form>					
+			{% endif %}				
 		</li>
 		<li>
-				{% block body %}
-				{% endblock %}
-			
+			{% block body %}
+			{% endblock %}
 		</li>
 	  </ul>
 	</div>
