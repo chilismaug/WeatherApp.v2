@@ -11,17 +11,21 @@
 		<li>
 			<h1>Weather in a City </h1>
 			{% if phase == 'answer' %}
-				<a href="/" class="fauxbtn">Reload City List</a>
+				<div class="fauxbtn">
+					<a href="/"  class="fauxbtn">Reload City List</a>
+				</div>
 			{% else %}
-				<form class="form-inline" method="POST" action="{{ url_for('result') }}">
+				<form class="form-block" method="POST" action="{{ url_for('result') }}">
 					<div class="select">
 						<select name="comp_select" class="selectpicker form-control">
 						{% for o in data %}
 							<option value="{{ o.name }}">{{ o.name }}</option>
 						{% endfor %}
 						</select>	
-					</div>						
-					<button type="submit" class="btn">Go</button>
+					</div>	
+					<div class="btn">					
+						<button class="btn" type="submit">Go</button>
+					</div>		
 				</form>					
 			{% endif %}				
 		</li>
