@@ -18,6 +18,9 @@
     "name": "Baja"
   },
   {
+    "name": "Bemidji"
+  },
+  {
     "name": "Bromley"
   },
   {
@@ -115,7 +118,10 @@
   },
  {
     "name": "McMurdo Station"
-  },
+ },
+  {
+    "name": "Menomonee Falls"
+  }, 
  {
     "name": "Metuchen"
   },
@@ -209,7 +215,6 @@
   {
     "name": "Timbuktu"
   },
-
   {
     "name": "Tupelo"
   },
@@ -218,7 +223,10 @@
   },
   {
     "name": "Toronto"
-  },
+  }, 
+  {
+    "name": "Trou Fanfaron"
+  }, 
   {
     "name": "Ushuaia"
   },
@@ -235,8 +243,14 @@
     "name": "Vyborg"
   },
   {
+    "name": "Yakutsk"
+  },
+  {
     "name": "Wanaque"
   },
+  {
+    "name": "Waxahachie"
+  },   
   {
     "name": "Whakapirau"
   },
