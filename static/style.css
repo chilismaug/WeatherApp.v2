@@ -108,10 +108,7 @@ select::-ms-expand {
   color: #f39c12;
 }
 /* Ye Olde Backe Linke */
-#fauxbtndiv{
-  /* justify-content: center; */
- 
-}
+
 
 .fauxbtn {
   -webkit-appearance: button;
