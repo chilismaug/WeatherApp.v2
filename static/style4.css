@@ -109,20 +109,20 @@ select::-ms-expand {
 }
 /* Ye Olde Backe Linke */
 #fauxbtndiv{
-  /* justify-content: center; */
- 
+  justify-content:center; 
 }
 
 .fauxbtn {
   -webkit-appearance: button;
   -moz-appearance: button;
   -ms-appearance: button;
+  margin: 0 auto;
+  display:table
+  position: relative;  
   appearance: button;
-  margin: auto;  
+  padding: 1em 1em 1em 1em;
+  margin: auto;
   margin-top: 10px;
-  text-align: center;
-  line-height: 100px;
- 
   outline: 0;
   box-shadow: none;
   border: 0 !important;

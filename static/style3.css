@@ -54,8 +54,6 @@ select {
   background: #2c3e50;
   overflow: auto;
   border-radius: 0.25em;
-}
-select {
   width: 100%;
   height: 100%;
   margin: auto;
@@ -63,6 +61,7 @@ select {
   color: #fff;
   cursor: pointer;
 }
+
 select::-ms-expand {
   display: none;
 }
@@ -99,7 +98,6 @@ select::-ms-expand {
   background-image: none;
   width: 15em;
   height: 3em;
-
   color: #fff;
   cursor: pointer;
   border-radius: 0.25em;
@@ -108,30 +106,21 @@ select::-ms-expand {
   color: #f39c12;
 }
 /* Ye Olde Backe Linke */
-#fauxbtndiv{
-  /* justify-content: center; */
- 
-}
-
 .fauxbtn {
   -webkit-appearance: button;
   -moz-appearance: button;
-  -ms-appearance: button;
+  -ms-appearance: button; 
   appearance: button;
-  margin: auto;  
+  margin: auto;
   margin-top: 10px;
-  text-align: center;
-  line-height: 100px;
- 
-  outline: 0;
   box-shadow: none;
-  border: 0 !important;
+  width: 15em;
+  height: 3em;
+ line-height: 16px;
   background: #2c3e50;
   background-image: none;
-  width: 15em;
-  height: 6em;
-
   color: #fff;
   cursor: pointer;
-  border-radius: 0.25em;
+  border-radius: 0.25em; 
+  font-size: 14px;
 }

@@ -11,8 +11,8 @@
 		<li>
 			<h1>Weather in a City </h1>
 			{% if phase == 'answer' %}
-				<div class="fauxbtn">
-					<a href="/"  class="fauxbtn">Reload City List</a>
+				<div id="fauxbtndiv" class="center-on-page-top">
+					<a href="/" class="fauxbtn">Another City</a>
 				</div>
 			{% else %}
 				<form class="form-block" method="POST" action="{{ url_for('result') }}">
